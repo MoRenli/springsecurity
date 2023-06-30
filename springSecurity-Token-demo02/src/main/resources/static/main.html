@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/login" method="post">
+    <input type="hidden"th:if="${_csrf}"th:value="${_csrf.token}"name="_csrf"/>
+    userName:<input type="text" name="username"><br>
+    password:<input type="password" name="password"><br>
+    rememberMe:<input type="checkbox" name="remember-me" value="true"><br>
+    submit:<input type="submit">
+</form>
+</body>
+</html>
